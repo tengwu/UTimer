@@ -60,7 +60,6 @@
             this.Text = "AddTaskForm";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
