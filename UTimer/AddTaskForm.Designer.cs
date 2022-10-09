@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTaskForm));
             this.tbTaskContent = new System.Windows.Forms.TextBox();
             this.tbTaskTime = new System.Windows.Forms.TextBox();
             this.btnYes = new System.Windows.Forms.Button();
@@ -35,41 +36,29 @@
             // 
             // tbTaskContent
             // 
-            this.tbTaskContent.Location = new System.Drawing.Point(9, 10);
-            this.tbTaskContent.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.tbTaskContent, "tbTaskContent");
             this.tbTaskContent.Name = "tbTaskContent";
-            this.tbTaskContent.Size = new System.Drawing.Size(216, 21);
-            this.tbTaskContent.TabIndex = 0;
             // 
             // tbTaskTime
             // 
-            this.tbTaskTime.Location = new System.Drawing.Point(235, 10);
+            resources.ApplyResources(this.tbTaskTime, "tbTaskTime");
             this.tbTaskTime.Name = "tbTaskTime";
-            this.tbTaskTime.Size = new System.Drawing.Size(48, 21);
-            this.tbTaskTime.TabIndex = 1;
             // 
             // btnYes
             // 
-            this.btnYes.Location = new System.Drawing.Point(235, 39);
-            this.btnYes.Margin = new System.Windows.Forms.Padding(2);
+            resources.ApplyResources(this.btnYes, "btnYes");
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(49, 21);
-            this.btnYes.TabIndex = 2;
-            this.btnYes.Text = "确定";
             this.btnYes.UseVisualStyleBackColor = true;
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // AddTaskForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 68);
             this.Controls.Add(this.tbTaskTime);
             this.Controls.Add(this.tbTaskContent);
             this.Controls.Add(this.btnYes);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddTaskForm";
-            this.Text = "AddTaskForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
