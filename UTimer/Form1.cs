@@ -13,6 +13,9 @@ namespace UTimer
     public partial class MainForm : Form
     {
         List<String> TaskList = null;
+        List<int> TaskTimeList = null;
+
+        int timer_cnt = 0;
 
         public MainForm()
         {
@@ -27,6 +30,7 @@ namespace UTimer
         private void Init()
         {
             TaskList = new List<string>();
+            TaskTimeList = new List<int>();
         }
         /**
          * 向用户发送消息
@@ -57,7 +61,10 @@ namespace UTimer
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            int idx = lbTask.SelectedIndex;
+            lbTask.Items.Remove(lbTask.Items[idx]);
+            TaskList.RemoveAt(idx);
+            TaskTimeList.RemoveAt(idx);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,8 +91,33 @@ namespace UTimer
             if (addTaskForm.DialogResult == DialogResult.OK)
             {
                 TaskList.Add(addTaskForm.taskName);
+                TaskTimeList.Add(addTaskForm.taskTime);
                 lbTask.Items.Add(addTaskForm.taskName);
                 addTaskForm.Close();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer_cnt += 1;
+            if (timer_cnt >= 10000000)
+            {
+                timer_cnt = 0;
+            }
+            process_tasks();
+        }
+
+        private void process_tasks()
+        {
+            int i;
+            for (i = 0; i < TaskList.Count; i++)
+            {
+                string msg = TaskList[i];
+                int time = TaskTimeList[i];
+                if (timer_cnt % time == 0)
+                {
+                    SendMessage("UTimer", msg);
+                }
             }
         }
     }

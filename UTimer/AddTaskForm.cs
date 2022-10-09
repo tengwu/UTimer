@@ -13,6 +13,7 @@ namespace UTimer
     public partial class AddTaskForm : Form
     {
         public String taskName = "";
+        public int taskTime = 10;
 
         public AddTaskForm()
         {
@@ -23,6 +24,11 @@ namespace UTimer
         {
             this.DialogResult = DialogResult.OK;
             this.taskName = this.tbTaskContent.Text;
+            String time = this.tbTaskTime.Text;
+            if(time != "")
+            {
+                this.taskTime = int.Parse(this.tbTaskTime.Text);
+            }
         }
     }
 }
