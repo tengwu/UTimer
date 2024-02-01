@@ -92,7 +92,7 @@ namespace UTimer
             {
                 TaskList.Add(addTaskForm.taskName);
                 TaskTimeList.Add(addTaskForm.taskTime);
-                lbTask.Items.Add(addTaskForm.taskName);
+                lbTask.Items.Add(addTaskForm.taskName + "\t" + "每" + addTaskForm.taskTime + "分钟");
                 addTaskForm.Close();
             }
         }

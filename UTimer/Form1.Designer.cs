@@ -55,19 +55,19 @@
             this.cmenustrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.退出ToolStripMenuItem});
             this.cmenustrip.Name = "cmenustrip";
-            this.cmenustrip.Size = new System.Drawing.Size(101, 26);
+            this.cmenustrip.Size = new System.Drawing.Size(117, 34);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(116, 30);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
             // btnAddTask
             // 
             this.btnAddTask.Location = new System.Drawing.Point(9, 10);
-            this.btnAddTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(61, 27);
             this.btnAddTask.TabIndex = 1;
@@ -78,7 +78,7 @@
             // btnDeleteTask
             // 
             this.btnDeleteTask.Location = new System.Drawing.Point(74, 10);
-            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDeleteTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteTask.Name = "btnDeleteTask";
             this.btnDeleteTask.Size = new System.Drawing.Size(61, 27);
             this.btnDeleteTask.TabIndex = 2;
@@ -93,7 +93,7 @@
             this.lbCountDown.Location = new System.Drawing.Point(330, 10);
             this.lbCountDown.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbCountDown.Name = "lbCountDown";
-            this.lbCountDown.Size = new System.Drawing.Size(0, 30);
+            this.lbCountDown.Size = new System.Drawing.Size(0, 44);
             this.lbCountDown.TabIndex = 3;
             // 
             // lbTask
@@ -101,9 +101,9 @@
             this.lbTask.FormattingEnabled = true;
             this.lbTask.ItemHeight = 12;
             this.lbTask.Location = new System.Drawing.Point(9, 42);
-            this.lbTask.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbTask.Margin = new System.Windows.Forms.Padding(2);
             this.lbTask.Name = "lbTask";
-            this.lbTask.Size = new System.Drawing.Size(425, 340);
+            this.lbTask.Size = new System.Drawing.Size(357, 364);
             this.lbTask.TabIndex = 4;
             this.lbTask.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -117,13 +117,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 391);
+            this.ClientSize = new System.Drawing.Size(378, 422);
             this.Controls.Add(this.lbTask);
             this.Controls.Add(this.lbCountDown);
             this.Controls.Add(this.btnDeleteTask);
             this.Controls.Add(this.btnAddTask);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "UTimer";
